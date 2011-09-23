@@ -4,6 +4,7 @@ endif
 let loaded_watchdog = 1
 
 autocmd BufWinEnter,WinEnter,CmdwinEnter,CursorHold,CursorHoldI,BufWritePost * call <SID>UpdateStatusLine(1, 0)
+autocmd FileType * call <SID>UpdateStatusLine(1, 0)
 autocmd WinLeave * call <SID>UpdateStatusLine(0, 0)
 autocmd ColorScheme * call <SID>InitScheme()
 
